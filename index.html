@@ -15,42 +15,52 @@
     </header>
 
     <section>
-      <h2>1. Inspection Occurrences Per Day Across All Years</h2>
-      <p>This heatmap shows inspection activity per day across years. Mid-week inspections are clearly dominant.</p>
+      <p>New York City is home to one of the most diverse food cultures in the world — a city of dumplings, bagels, jerk chicken, tacos, and Michelin stars. But behind the flavors lies an invisible system of health inspections that ensures what we eat is safe. In this project, we explore the patterns of restaurant inspections using NYC Open Data, revealing how timing, location, and cuisine all intersect to shape the city’s culinary safety net.</p>
+    </section>
+
+    <section>
+      <h2>When are restaurants inspected?</h2>
+      <p>Before we look into where and what kind of restaurants get inspected, let’s look at when inspections happen. The calendar heatmap reveals clear patterns: inspections cluster heavily around weekdays — especially mid-week — and are sparse on weekends. This likely reflects the scheduling of inspectors and the operational patterns of restaurants.The frequency also varies slightly across months, with some dips that align with holidays or city-wide slowdowns (like the pandemic years). This tells us that inspections are not purely random, but tied to institutional rhythms.</p>
       <img src="assets/images/inspections.png" alt="Inspection Occurrences Heatmap">
     </section>
 
     <section>
-      <h2>2. NYC Restaurant Locations and Inspection Grades</h2>
-      <p>Interactive map showing restaurant grades (A, B, C) across NYC neighborhoods.</p>
+      <h2>Where Are the Safe Restaurants?</h2>
+      <p>Our next question is spatial: where are the best (and worst) performing restaurants? This interactive map displays restaurant grades across the city. Grade A restaurants dominate most neighborhoods, but clusters of lower grades (B and C) appear in specific areas. These pockets may reflect economic conditions, enforcement differences, or even building conditions. The geographic spread helps visualize food safety not just as a policy outcome, but as part of the city’s urban fabric.</p>
       <iframe src="assets/interactive/NYC_Restaurant_Locations_and_Inspection_Grades.html" style="width: 1108.5px; height: 718.5px; border: none; overflow: hidden; display: block; margin-left: 20; margin-right: 50;"></iframe>
     </section>
 
     <section>
-      <h2>3. Yearly Restaurant Inspections in Each Borough</h2>
-      <p>How inspections have changed over time in each borough.</p>
+      <h2>Borough by Borough: Who Gets Inspected the Most?</h2>
+      <p>Looking at inspections by borough over the years gives us a broader institutional view. Manhattan consistently leads in inspections, reflecting its dense concentration of restaurants. But all boroughs show a dramatic dip in 2020 — the effect of COVID-19 — followed by recovery. The varying speeds of that recovery may hint at differences in reopening policies, staffing, or even business closures across boroughs.</p>
       <iframe src="assets/interactive/Yearly_Restaurant_Inspections_in_Each_Borough.html" style="width: 100%; height: 920px; border: none; overflow: hidden;"></iframe>
     </section>
 
     <section>
-      <h2>4. Inspections Over Time by Cuisine</h2>
-      <p>Different cuisines show different inspection rhythms, influenced by cultural trends and policy shifts.</p>
+      <h2>A Matter of Taste: Cuisine and Inspections Over Time</h2>
+      <p>Cuisines aren’t just cultural — they may also come with different inspection patterns. This time series plot tracks inspections over time by cuisine type.
+
+Some types — like Chinese or American — are inspected far more often, likely due to their dominance. But some cuisines show greater fluctuation, suggesting trends in popularity or targeted scrutiny. Understanding these patterns helps contextualize inspection frequency within broader cultural shifts.</p>
       <iframe src="assets/interactive/NYC_Restaurant_Inspections_Over_Time_by_Cuisine.html" style="width: 1108px; height: 680px; border: none; overflow: hidden;"></iframe>
     </section>
 
     <section>
-      <h2>5. Top 10 Cuisines by Critical vs Non-Critical Violations</h2>
-      <p>This chart compares the top cuisine types and how serious their violations tend to be.</p>
+      <h2>What Gets Flagged: Critical vs. Non-Critical Violations</h2>
+      <p>Not all violations are equal. Some are minor — like a broken light — while others (like improper food storage) are critical. This chart compares the top 10 cuisines by how many critical vs non-critical violations they receive. Certain cuisines have disproportionately high critical violations. Whether this reflects riskier preparation methods, tighter scrutiny, or training gaps, it highlights which food categories might benefit most from targeted interventions.</p>
       <iframe src="assets/interactive/top_10_cuisine_types_by_critical_non_critical_violations.html" style="width: 700px; height: 730px; border: none; overflow: hidden;"></iframe>
     </section>
 
     <section>
-      <h2>6. Monthly Inspections by Borough</h2>
-      <p>Seasonal trends in inspections across NYC's five boroughs.</p>
+      <h2>The Seasonality of Safety</h2>
+      <p>Finally, inspections follow seasonal rhythms. In this monthly breakdown by borough, we see patterns of peaks and dips — spring surges, summer slowdowns, and end-of-year dips. This isn’t just academic: it may reflect staff scheduling, budget cycles, or strategic enforcement periods. Understanding these cycles allows policymakers to better allocate resources — and helps restaurants anticipate inspections.</p>
       <iframe src="assets/interactive/Monthly_restaurant_Inspections_by_borough.html" style="width: 1070px; height: 600px; border: none; overflow: hidden;"></iframe>
     </section>
 
-    <footer>
+<section>
+      <h2>Conclusion: What Data Tells Us About the City We Eat In</h2>
+      <p>From time to place to cuisine, inspection patterns reveal much about how New York City works. Inspections don’t happen in a vacuum — they follow schedules, trace city politics, and mirror cultural change.By analyzing and visualizing this data, we not only improve food safety, but uncover the deeper patterns of the city’s everyday life. Next time you see a grade on a restaurant window, you’ll know a little more about the complex system behind it.</p>
+    
+<footer>
       <p>© 2025 by Your Name. Data source: NYC Open Data.</p>
     </footer>
   </div>
