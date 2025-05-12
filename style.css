@@ -5,17 +5,20 @@
 
 /* Γενικές ρυθμίσεις */
 body {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-  color: #1e2a33; /* similar dark gray-blue */
-  font-size: 1.5rem;
   margin: 0;
   padding: 2rem 1rem;
   font-family: 'Inter', sans-serif;
   background-color: #f3f3f3;
   overflow-x: hidden;
+}
+p {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #333;
+  font-size: 1.8rem;
+  line-height: 1.6;
 }
 
 /* Το “χαρτί” */
@@ -43,10 +46,20 @@ h1 {
   font-family: 'Merriweather', serif;
   font-style: italic;
   font-weight: 400;
-  font-size: 2rem;
-  color: #565555;
-  margin-top: 1rem;
-  margin-bottom: 0.2rem;
+  font-size: 2.7rem;
+  color: #dc9b9b;
+  margin-top: 0rem;
+  margin-bottom: 5rem;
+}
+.caption {
+  font-family: 'Merriweather', serif;
+  font-size: 1.8rem;
+  color: #797979;
+  font-style: italic;
+  font-weight: 100;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 h2 {
@@ -54,7 +67,7 @@ h2 {
   margin-bottom: 0.8rem;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 300;
+  font-weight: 700;
   font-style: normal;
   color: #953b3b; /* similar dark gray-blue */
   font-size: 2.5rem;
@@ -76,6 +89,14 @@ iframe {
   border: none;
   overflow: hidden;
 }
+.plot-container {
+  background: white;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 8px;
+}
+
 
 /* Footer */
 footer {
