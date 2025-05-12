@@ -5,6 +5,12 @@
 
 /* Γενικές ρυθμίσεις */
 body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 150;
+  font-style: normal;
+  color: #1e2a33; /* similar dark gray-blue */
+  font-size: 1rem;
   margin: 0;
   padding: 2rem 1rem;
   font-family: 'Inter', sans-serif;
@@ -30,14 +36,14 @@ h1 {
   font-weight: 900;
   font-style: normal;
   color: #1e2a33; /* similar dark gray-blue */
-  font-size: 3.5rem;
+  font-size: 4rem;
 }
 
 .subtitle {
   font-family: 'Merriweather', serif;
   font-style: italic;
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 2rem;
   color: #858181;
   margin-top: 0.2rem;
   margin-bottom: 1rem;
