@@ -38,7 +38,7 @@ h1 {
   font-style: italic;
   font-weight: 400;
   font-size: 1.2rem;
-  color: #555;
+  color: #858181;
   margin-top: 0.2rem;
   margin-bottom: 1rem;
 }
@@ -46,6 +46,12 @@ h1 {
 h2 {
   margin-top: 3rem;
   margin-bottom: 0.8rem;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: #570038; /* similar dark gray-blue */
+  font-size: 3.5rem;
 }
 
 /* Εικόνες */
