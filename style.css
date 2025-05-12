@@ -1,0 +1,74 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+/* Γενικές ρυθμίσεις */
+body {
+  margin: 0;
+  padding: 2rem 1rem;
+  font-family: 'Inter', sans-serif;
+  background-color: #f3f3f3;
+  overflow-x: hidden;
+}
+
+/* Το “χαρτί” */
+.container {
+  max-width: 1600px;  /* όσο χρειάζεται για τα iframe σου */
+  margin: 0 auto;
+  padding: 2.5rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Τίτλοι */
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  color: #1e2a33; /* similar dark gray-blue */
+  font-size: 3.5rem;
+}
+
+.subtitle {
+  font-family: 'Merriweather', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  margin-top: 3rem;
+  margin-bottom: 0.8rem;
+}
+
+/* Εικόνες */
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Τα default iframe (αυτά χωρίς custom inline style) */
+iframe {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  border: none;
+  overflow: hidden;
+}
+
+/* Footer */
+footer {
+  margin-top: 4rem;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #777;
+}
