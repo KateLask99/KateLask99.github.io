@@ -8,9 +8,12 @@ body {
   margin: 0;
   padding: 2rem 1rem;
   font-family: 'Inter', sans-serif;
-  background-color: #f3f3f3;
+  background-color: #dc9b9b;
   overflow-x: hidden;
+  
 }
+
+
 p {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -19,6 +22,16 @@ p {
   color: #333;
   font-size: 1.8rem;
   line-height: 1.6;
+}
+
+.fake-bullets p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #333;
+  line-height: 1.6;
+  margin: 0.2rem 0;
+  padding-left: 1rem;
 }
 
 /* Το “χαρτί” */
@@ -101,7 +114,13 @@ iframe {
 /* Footer */
 footer {
   margin-top: 4rem;
-  font-size: 0.9rem;
   text-align: center;
-  color: #777;
+}
+
+footer p {
+  font-family: 'Merriweather', serif;
+  font-size: 1.8rem !important;
+  color: #797979;
+  font-style: italic;
+  line-height: 1.4;
 }

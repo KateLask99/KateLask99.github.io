@@ -13,83 +13,105 @@
   <div class="container">
     <header>
       <h1>FOOD SAFETY THROUGH THE YEARS:<br> A DECADE OF DINING IN NYC</h1>
-      <p class="subtitle">Exploring restaurant inspection patterns through data and visualization.</p>
+      <p class="subtitle">Exploring restaurant inspection patterns through data analysis and visualization.</p>
     </header>
 
 
     <section>
-      <p>New York City is home to one of the most diverse food cultures in the world — a city of dumplings, bagels, jerk chicken, tacos, and Michelin stars. But behind the flavors lies an invisible system of health inspections that ensures what we eat is safe. In this project, we explore the patterns of restaurant inspections using NYC Open Data, revealing how timing, location, and cuisine all intersect to shape the city’s culinary safety net.</p>
+      <p>New York City is home to one of the most diverse food cultures in the world — a city of dumplings, bagels, jerk chicken, tacos, and Michelin stars. But behind the flavors lies an invisible system of health inspections that ensures what we eat is safe. In this project, we explore the patterns of restaurant inspections using NYC Open Data released by the Department of Health and Mental Hygiene (DOHMH) [1], revealing how timing, location, and cuisine all intersect to shape the city’s culinary safety net.</p>
     </section>
 <hr>
 
      <section>
-      <h2>When do inspections happen?</h2>
-      <p>Inspections don’t happen evenly across the year. Some months clearly stand out. This chart gives us a seasonal glimpse into how inspection activity builds and fades. A pattern that could reflect practical factors like staffing cycles or broader scheduling choices.</p>
+      <h2>When do inspections happen in different NYC Boroughs?</h2>
+      <p>Restaurant inspections don’t follow a perfectly even pace throughout the year—some months clearly stand out. The chart below gives us a glimpse into the seasonal rhythm of inspections, showing how activity builds and drops as the year progresses. It also lets us compare patterns across NYC’s boroughs, helping us explore whether some areas experience more intense inspection periods than others—and if so, when.</p>
       <div class="plot-container">
       <iframe src="assets/interactive/Monthly_restaurant_Inspections_by_borough.html" style="width: 1070px; height: 550px; border: none; overflow: hidden;"></iframe>
       </div>
       <p class="caption">Figure 1: A seasonal breakdown of inspections across NYC boroughs.</p>
-      <p>This chart presents the monthly distribution of restaurant inspections across NYC boroughs. A clear seasonal pattern emerges: inspections rise steadily from January, peak between February and April, and then drop sharply during the summer months (June–August). Toward the end of the year, particularly in December, there is a notable increase again. Brooklyn, Queens, and Manhattan consistently account for the highest number of inspections each month, while Staten Island has the fewest throughout the year. The recurring pattern suggests a structured inspection cycle, although its causes (e.g. weather, policy, staffing) would require further investigation beyond the available data.</p>
+      <p>This chart presents the monthly distribution of restaurant inspections across NYC boroughs. A clear seasonal pattern emerges: inspections rise steadily from January, peak between February and April, and then drop sharply during the summer months (June–August). Toward the end of the year, particularly in December, there’s a notable increase again. Looking across boroughs, Brooklyn, Queens, and especially Manhattan consistently account for the highest number of inspections each month, while Staten Island has the fewest. This isn’t surprising. Manhattan has the largest concentration of restaurants in the city  [4], so more inspections naturally follow. This trend is also supported by external sources, such as local news and food regulation reports. These observations point toward a structured inspection rhythm, likely influenced by a mix of policy, logistics, and the distribution of food businesses across the city [3,4].</p>
     </section>
 
     <section>
       <h2>What about day-to-day patterns?</h2>
-      <p>Zooming in further, we explore how inspections vary over the days of the week and calendar year.</p>
+      <p>Zooming in further, we explore how inspections vary over the days of the week and across all the calendar years (2016-2025). By visualizing the number of inspections conducted daily, we gain insights into the operational patterns of NYC DOHMH. This day-to-day view complements the broader temporal analyses and uncovers finer operational patterns not visible in monthly or yearly aggregates.</p>
       <div class="plot-container">
       <img src="assets/images/inspections.png" alt="Inspection Occurrences Heatmap">
       </div>
-      <p class="caption">Figure 2: A calendar heatmap revealing clear weekly inspection patterns across multiple years.</p>
-      <p>Inspection activity shows a clear weekly structure: most inspections take place from Tuesday to Thursday, with Monday and Friday seeing moderate activity, and weekends being almost completely avoided. This weekly rhythm remains consistent across all years. What stands out, however, is the dramatic drop in activity during 2020 — a likely reflection of pandemic-related disruptions. From 2021 onward, inspections begin to rebound, and in the last two years (2023–2024), we observe a notable increase not only in frequency but also in day-to-day coverage. This suggests a period of intensified inspection efforts post-COVID. The first months of 2025 appear equally dense, though the year is still incomplete.</p>
+      <p class="caption">Figure 2: Calendar heatmap showing daily inspection patterns across the years (2016-2025)</p>
+      <p>Inspection activity shows a clear weekly structure: most inspections take place from Tuesday to Thursday, with Monday and Friday seeing moderate activity, and weekends being almost completely avoided. This weekly rhythm remains consistent across all years. What stands out, however, is the dramatic drop in activity during 2020 — a likely reflection of pandemic-related disruptions [3]. From 2021 onward, inspections begin to rebound, and in the last two years (2023–2024), we observe a notable increase not only in frequency but also in day-to-day coverage. This suggests a period of intensified inspection efforts post-COVID [3]. The first months of 2025 appear equally dense, though the year is still incomplete.It also highlights seasonal trends, such as dips during public holidays like Christmas or weather-related disruptions, and surges towards the beginning of the months where inspection cycles are concentrated.</p>
     </section>
 
     <section>
       <h2>Where Are the Safe Restaurants?</h2>
-      <p>Our next question is spatial: where are the best (and worst) performing restaurants? This interactive map displays restaurant grades across the city.</p>
-      <div class="plot-container">
-      <iframe src="assets/interactive/NYC_Restaurant_Locations_and_Inspection_Grades.html" style="width: 1108.5px; height: 718.5px; border: none; overflow: hidden; display: block; margin-left: 20; margin-right: 50;"></iframe>
-      </div> 
-      <p class="caption">Figure 3: An interactive map displaying restaurant grades (A, B, C) throughout New York City. Color-coded markers indicate food safety performance by location.</p>
-      <p>While ‘A’ grades dominate, some neighborhoods show higher proportions of ‘B’ and ‘C’ grades. These spatial patterns may hint at resource inequalities, infrastructure challenges, or concentrated enforcement.</p>
-    </section>
+   <p>Our next question is spatial: where are the best (and worst) performing restaurants? 
+This interactive map displays restaurant grades across the city. These inspection grades depend on the inspection scores as follows [5]:</p>
 
-    <section>
-      <h2>Borough by Borough: Who Gets Inspected the Most?</h2>
-      <p>Next, we step back to see how inspection volume has changed over the past decade in each borough.</p>
+<div class="fake-bullets">
+  <p>● Inspection score of 0–13: Grade A (Excellent compliance)</p>
+  <p>● Inspection score of 14–27: Grade B (Adequate compliance)</p>
+  <p>● Inspection score of 28+: Grade C (Poor compliance)</p>
+</div>
+      <div class="plot-container">
+      <iframe src="assets/interactive/NYC_Restaurant_Locations_and_Inspection_Grades1.html" style="width: 1240px; height: 750px; border: none; overflow: hidden; display: block; margin-left: 20; margin-right: 50;"></iframe>
+      </div> 
+      <p class="caption">Figure 3: An interactive map displaying restaurant grades (A, B, C) throughout New York City. Each dot represents a restaurant, plotted according to its latitude and longitude values and the color-coded markers indicate food safety compliance by location - Green  for Grade 'A' (Excellent Compliance), Orange Grade 'B' (Adequate Compliance) and Red  for Grade 'A' (Poor Compliance).</p>
+      <p>The map reveals clear geographic patterns in restaurant hygiene compliance across New York City. Manhattan shows the highest density of restaurants [4], with a strong concentration of Grade A (green) establishments, suggesting generally high compliance in central commercial areas. In contrast, Brooklyn and Queens exhibit more dispersed restaurant locations with a noticeable presence of Grade B (orange) and Grade C (red) grades. The Bronx and Staten Island have fewer establishments overall but still show clusters of low-graded restaurants. These spatial trends suggest that inspection outcomes are not evenly distributed across the city.</p>
       <div class="plot-container">
       <iframe src="assets/interactive/Yearly_Restaurant_Inspections_in_Each_Borough.html" style="width: 100%; height: 920px; border: none; overflow: hidden;"></iframe>
       </div>
       <p class="caption">Figure 4: An interactive choropleth map showing the spatial distribution of restaurant inspections across NYC boroughs, year by year.</p>
-      <p>This animated map shows the annual volume of restaurant inspections across NYC's boroughs from 2016 to 2025. Manhattan, Queens, and Brooklyn consistently lead in inspection counts, while Staten Island remains lower throughout. A clear dip appears in 2020, likely reflecting the pandemic’s disruption. But from 2021 onward, inspections not only recover, they surge. By 2024, volumes in boroughs like Queens and Brooklyn reach their highest levels in the dataset. The overall trend highlights a strong rebound and growth in inspection activity citywide. </p>
+      <p>This animated map shows the annual volume of restaurant inspections across NYC's boroughs from 2016 to 2025. Manhattan, Queens, and Brooklyn consistently lead in inspection counts, while Staten Island remains lower throughout. Interestingly, no inspections are recorded in the Bronx for 2016. A clear dip appears in 2020, likely reflecting the pandemic’s disruption [4]. But from 2021 onward, inspections not only recover, they surge. By 2024, volumes in boroughs like Queens and Brooklyn reach their highest levels in the dataset. The overall trend highlights a strong rebound and growth in inspection activity citywide. </p>
     </section>
 
     <section>
       <h2>What kinds of restaurants get inspected more?</h2>
-      <p>Cuisine types are not inspected equally. Some are more common, some face more violations, and some shift dramatically over time.</p>
+      <p>Different cuisine types are not inspected evenly. Some specific cuisines across New York City regularly comply to safety standards and guidelines, while others are more prone to violations or require more frequent follow-ups. This plot shows how inspection activities have evolved over time for each cuisine type, highlighting differences in attention, regulation, and how they were affected by key policy changes and the COVID-19 pandemic.</p>
       <div class="plot-container">
-      <iframe src="assets/interactive/NYC_Restaurant_Inspections_Over_Time_by_Cuisine.html" style="width: 1108px; height: 680px; border: none; overflow: hidden;"></iframe>
+      <iframe src="assets/interactive/NYC_Restaurant_Inspections_Over_Time_by_Cuisine1.html" style="width: 1108px; height: 680px; border: none; overflow: hidden;"></iframe>
       </div>
-      <p class="caption">Figure 5: An area plot showing how inspection frequency varies among different cuisines.</p>
-      <p>This time series reveals that American cuisine (green line) consistently receives the highest number of inspections, peaking sharply after 2021. This suggests it may be the most prevalent category or one that receives focused regulatory attention. Chinese restaurants (light green) also show a steady inspection presence, with a smaller but noticeable increase in recent years. Tea/Coffee venues (blue) see a marked rise beginning in 2021, possibly due to the growth of small beverage outlets post-COVID. Meanwhile, Mexican restaurants (orange) maintain lower overall inspection counts, though they too show a modest rise after the pandemic. These trends reflect not only cuisine popularity but also possible operational shifts or inspection targeting policies over time.</p>
+      <p class="caption">Figure 5: Interactive line chart showing the number of NYC restaurant inspections over time by cuisine type. </p>
+      <p>In the above plot, each line represents a specific cuisine, while vertical dashed lines indicate key regulatory or public health events (policy shifts such as Focus on Rat Mitigation in 2017 [2], Violation Score Change through the introduction of letter grading in 2018, COVID-19 lockdown period from 2020 to 2021, and Focus on Kitchen Hazards in 2023). The plot highlights how inspection frequency varies by cuisine and responds to citywide initiatives and disruptions. It reveals that American cuisine consistently receives the highest number of inspections, peaking sharply after 2021. This suggests it may be the most prevalent category or one that receives focused regulatory attention. Chinese restaurants also show a steady inspection presence [7], with a smaller but noticeable increase in recent years. Tea/Coffee venues see a marked rise beginning in 2021, possibly due to the growth of small beverage outlets post-COVID. Meanwhile, Mexican restaurants maintain lower overall inspection counts, though they too show a modest rise after the pandemic. These trends reflect not only cuisine popularity but also possible operational shifts or inspection targeting policies over time.</p>
     </section>
 
     <section>
       <h2>What kinds of violations do cuisines get?</h2>
-      <p>Beyond frequency, the severity of violations tells us even more. Here we compare critical and non-critical violations across the top 10 cuisine types.</p>
+      <p>Beyond how often restaurants are inspected, the severity of violations reveals deeper insights into food safety and operational risk. This chart compares the number of critical and non-critical violations recorded for the top 10 most frequently inspected cuisine types in NYC. Critical violations—such as evidence of pests, improper food handling, or unsanitary kitchen conditions—pose immediate public health risks, while non-critical ones are typically procedural or cosmetic.</p>
       <div class="plot-container">
       <iframe src="assets/interactive/top_10_cuisine_types_by_critical_non_critical_violations1.html" style="width: 900px; height: 950px; border: none; overflow: hidden;"></iframe>
       </div>
       <p class="caption">Figure 6: A comparison of violation severity among the top 10 cuisine types.</p>
-      <p>American cuisine leads the pack in total violations — which makes sense given how common it is. But when we look at the balance between critical and non-critical issues, some interesting differences pop up. Chinese restaurants, for example, have noticeably more critical violations, while places serving Latin American food or pizza show a much more even split. It’s a good reminder that not all cuisines face the same kinds of challenges during inspections.</p>
+      <p>American cuisine leads the pack in total violations — which makes sense given how common it is. But when we look at the balance between critical and non-critical issues, some interesting differences pop up. Chinese restaurants, for example, have noticeably more critical violations, while places serving Latin American food or pizza show a much more even split. Thus, not all cuisines face the same kinds of challenges during inspections. This comparison highlights not just how often violations occur, but also where compliance gaps may be more serious, helping to identify areas where targeted food safety interventions might be most needed.</p>
     </section>
 
 <div style="height: 3.5rem;"></div>
 
   <hr>
 <section>
-      <p>Looking at a decade of inspections, some things become clear. Restaurant visits don’t happen at random — they follow rhythms tied to time of year, day of the week, and post-pandemic recovery. We’ve also seen how some cuisines are inspected more often than others, and how violations — both critical and not — vary across food types. Of course, data like this doesn’t tell the whole story. It raises questions: Are certain cuisines inspected more simply because they’re more common? Do higher violations reflect actual risk, or differences in operational style or inspection focus? What we do know is this: behind every data point is a restaurant, a team, and a community. And when inspections are thoughtful and fair, they don’t just catch problems — they support safer dining for everyone.</p>
+      <p>Looking at nearly a decade of restaurant inspections in New York City, clear patterns emerge. Inspections are far from random — they follow consistent rhythms tied to time of year, day of the week, and broader public health efforts. We observed that inspections peak in early spring, dip in the summer, and rise again toward the end of the year. Weekdays, especially Tuesday to Thursday, see the most activity, while weekends are largely avoided. The disruption in 2020 due to COVID-19 is stark [3], but so is the rebound — by 2024, inspection volumes across boroughs reached their highest levels in the dataset, particularly in Queens and Brooklyn.</p>
+
+<p>Geographically, Manhattan remains the most densely inspected borough and holds the highest concentration of top-grade restaurants [4]. In contrast, Brooklyn and Queens show greater variation in inspection outcomes, with more B and C grades, pointing to differing levels of compliance and possibly differing enforcement or infrastructure challenges. Staten Island and the Bronx, while less active overall, also reveal pockets of lower-performing establishments.</p>
+
+<p>Culturally, inspection patterns reflect both the popularity and operational realities of different cuisines. American food, the most common, dominates in inspection volume and total violations [6]. Chinese and Latin American cuisines show higher proportions of critical violations, while others like Italian and Japanese fare better in terms of compliance. Beverage-focused venues like tea and coffee shops have seen a post-pandemic surge, mirroring broader trends in urban dining.</p>
+
+<p>Together, these findings tell an interesting story of a system that adapts — reacting to public health crises, shifting culinary trends, and neighborhood-specific challenges. They also highlight potential disparities worth exploring further: Why are some cuisines or neighborhoods flagged more often? Do these patterns reflect true risk, or variations in enforcement? While data can't answer all these questions on its own, thorough research of relevant news articles and blog posts about food safety and dining habits in New York City have supported our findings and have shown where smart, fair inspections can help in the better enforcement of regulations and help diners make safer, more reliable choices [3,4].</p>
  
+<section>
+  <h2>References</h2>
+  <p>[1] New York City Department of Health and Mental Hygiene. (n.d.). Restaurant Inspection Results.NYC Open Data. https://data.cityofnewyork.us/Health/Restaurant-Inspection-Results/43nn-pn8j (Accessed April 8, 2025)</p>
+  <p>[2] New York City Department of Health and Mental Hygiene. (n.d.). Rats: Working in your community. NYC.gov. Retrieved May 13, 2025, from https://www.nyc.gov/site/doh/health/health-topics/rats-working-in-your-community.page</p>
+  <p>[3] Erika Adams. “Why NYC Restaurant Health Inspections Are Still So Delayed.” Eater NY, February 13, 2025. https://ny.eater.com/2025/2/13/24365229/restaurants-health-inspections-delays-grades-budget-cuts</p>
+  <p>[4] Delaney, A. (2024, April 1). How New York City Eats: Mapping the city's landscape of restaurants, bars, and cafes. ArcGIS StoryMaps. https://storymaps.arcgis.com/stories/eb4fffb4263a4373b74316ba86714fb6</p>
+  <p>[5] NYC Department of Health and Mental Hygiene. (n.d.). Letter Grading for Restaurants. https://www.nyc.gov/site/doh/business/food-operators/letter-grading-for-restaurants.page</p>
+  <p>[6] New York.co.uk. Typical American Food in New York. Retrieved from https://www.newyork.co.uk/typical-american-food-in-new-york/</p>
+  <p>[7] Pew Research Center. (2023, May 23). 71% of Asian Restaurants in the U.S. Serve Chinese, Japanese or Thai Food. Retrieved from https://www.pewresearch.org/short-reads/2023/05/23/71-of-asian-restaurants-in-the-u-s-serve-chinese-japanese-or-thai-food/</p> 
+  <p>[8] Segel, E., & Heer, J. (2010). Narrative Visualization: Telling Stories with Data. IEEE Transactions on Visualization and Computer Graphics, 16(6), 1139–1148. https://doi.org/10.1109/TVCG.2010.179</p>
+  <p></p>
+</section>
 <footer>
-      <p>© 2025 by Aikaterini Laskaraki, Zhanhui Qu and Srijita Sarkar. <br> Data source: NYC Open Data.</p>
+      <p>© 2025 by Aikaterini Laskaraki, Zhanhui Qu and Srijita Sarkar.</p> 
+      <p> Data source: <br> New York City Department of Health and Mental Hygiene (n.d.), Restaurant Inspection Results.<br>
+ https://data.cityofnewyork.us/Health/Restaurant-Inspection-Results/43nn-pn8j .</p>
     </footer>
   </div>
 </body>
